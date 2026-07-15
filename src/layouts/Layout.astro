@@ -1,0 +1,20 @@
+---
+import '../styles/global.css'; // Подключение стилей
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <body class="bg-[var(--color-back)] overflow-x-hidden text-[var(--color-black)]">
+    <slot />
+    
+    <!-- Подключение вынесенного JS -->
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

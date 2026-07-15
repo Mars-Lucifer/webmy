@@ -1,0 +1,169 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap");
+
+@theme {
+  /* Шрифты */
+  --font-sans: "Manrope", sans-serif;
+
+  /* Цвета */
+  --color-white: #ffffff;
+  --color-back: #edeef0;
+  --color-gray-text: #828894;
+  --color-black-plus: #1f2229;
+  --color-black: #0d111a;
+  --color-yellow: #ff5d1a;
+  --color-green: #5fe002;
+}
+
+/* Адаптив размеров через html font-size (База 1400px+ -> 1rem = 16px) */
+html {
+  font-size: 16px;
+  font-family: var(--font-sans);
+  color: var(--color-black);
+  background-color: var(--color-back);
+}
+
+@media (max-width: 1399px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1023px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@layer utilities {
+  /* 1. Появление текста из маски (снизу вверх) */
+  .text-mask {
+    display: inline-flex;
+    overflow: hidden;
+    vertical-align: bottom;
+  }
+  .text-mask-inner {
+    display: inline-block;
+    transform: translateY(110%);
+    animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* 2. Скролл текста при наведении (Awwwards hover) */
+  .hover-scroll {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .hover-scroll-main {
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hover-scroll-hover {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hover-scroll:hover .hover-scroll-main,
+  .hover-scroll:hover .hover-scroll-hover {
+    transform: translateY(-100%);
+  }
+
+  /* 3. Scale + Blur + Opacity для кнопок и плашек */
+  .fade-scale-blur {
+    opacity: 0;
+    transform: scale(0.9);
+    filter: blur(40px);
+    animation: fadeScaleBlur 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Keyframes */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(110%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeScaleBlur {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+      filter: blur(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0);
+    }
+  }
+
+  /* Утилиты для задержки анимаций (Stagger effect) */
+  .delay-100 {
+    animation-delay: 200ms;
+  }
+  .delay-200 {
+    animation-delay: 300ms;
+  }
+  .delay-300 {
+    animation-delay: 400ms;
+  }
+  .delay-400 {
+    animation-delay: 500ms;
+  }
+
+  /* Типографика (в rem относительно 16px) */
+  .h1 {
+    font-size: 5rem; /* 80px */
+    line-height: 5.35rem; /* 85.6px */
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .text-main {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 400;
+  }
+
+  .text-small {
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+  }
+
+  .text-tiny {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 400;
+  }
+
+  /* Ссылки (те же размеры, но medium) */
+  .link-main {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .link-small {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .link-tiny {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  /* Сетка: 4 колонки, отступы 80px, gap 20px */
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem; /* 20px */
+    padding-left: 3.75rem; /* 60px */
+    padding-right: 3.75rem; /* 60px */
+    width: 100%;
+    margin: 0 auto;
+  }
+}

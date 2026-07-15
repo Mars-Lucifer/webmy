@@ -1,0 +1,119 @@
+---
+---
+<!-- Хедер -->
+<header 
+  id="header" 
+  class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1600px] z-50 transition-all duration-300 py-[1.375rem] px-[1.25rem] md:px-[5rem]"
+>
+  <div id="header-inner" class="flex items-center justify-between w-full transition-all duration-300">
+    
+    <!-- Логотип -->
+    <div class="flex flex-col gap-[0.25rem] fade-scale-blur">
+      <div class="font-medium text-[1.5rem] leading-[1.07] tracking-tight uppercase">NIKITA.RYBALKO</div>
+      <div class="flex w-full justify-between items-center font-medium text-[1rem] leading-[1.07]">
+        <span class="text-[var(--color-gray-text)]">/</span>
+        <span>WEB-DESIGNER</span>
+      </div>
+    </div>
+
+    <!-- Десктопное меню (Добавлен эффект hover-scroll) -->
+    <nav class="hidden md:flex items-center gap-[3.125rem] fade-scale-blur delay-100">
+      <a href="#" class="link-small text-[var(--color-gray-text)] hover:text-[var(--color-black)] transition-colors hover-scroll">
+        <span class="hover-scroll-main">Навыки</span>
+        <span class="hover-scroll-hover text-[var(--color-black)]">Навыки</span>
+      </a>
+      <a href="#" class="link-small text-[var(--color-gray-text)] hover:text-[var(--color-black)] transition-colors hover-scroll">
+        <span class="hover-scroll-main">Портфолио</span>
+        <span class="hover-scroll-hover text-[var(--color-black)]">Портфолио</span>
+      </a>
+      <a href="#" class="link-small text-[var(--color-gray-text)] hover:text-[var(--color-black)] transition-colors hover-scroll">
+        <span class="hover-scroll-main">Компетенции</span>
+        <span class="hover-scroll-hover text-[var(--color-black)]">Компетенции</span>
+      </a>
+      <a href="#" class="link-small text-[var(--color-gray-text)] hover:text-[var(--color-black)] transition-colors hover-scroll">
+        <span class="hover-scroll-main">Контакты</span>
+        <span class="hover-scroll-hover text-[var(--color-black)]">Контакты</span>
+      </a>
+    </nav>
+
+    <!-- Бургер -->
+    <button id="burger-btn" class="md:hidden z-50 relative w-8 h-8 flex justify-center items-center cursor-pointer border-none bg-transparent fade-scale-blur delay-100">
+      <span class="absolute w-full h-[2px] bg-[var(--color-black)] transition-transform duration-300 -translate-y-1.5"></span>
+      <span class="absolute w-full h-[2px] bg-[var(--color-black)] transition-transform duration-300 translate-y-1.5"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- Мобильное фуллскрин-меню -->
+<div id="mobile-menu" class="fixed inset-0 bg-[var(--color-back)]/80 backdrop-blur-[32px] z-40 opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center justify-center gap-[2rem]">
+  <a href="#" class="text-[2rem] font-medium text-[var(--color-black)]">Навыки</a>
+  <a href="#" class="text-[2rem] font-medium text-[var(--color-black)]">Портфолио</a>
+  <a href="#" class="text-[2rem] font-medium text-[var(--color-black)]">Компетенции</a>
+  <a href="#" class="text-[2rem] font-medium text-[var(--color-black)]">Контакты</a>
+</div>
+
+<!-- Главный экран -->
+<main class="w-full max-w-[1600px] mx-auto h-[100vh] relative pt-[8rem] box-border">
+  
+  <div class="grid-layout w-full">
+    
+    <!-- H1 (Текст обернут в text-mask) -->
+    <div class="col-span-4">
+      <h1 class="h1 flex flex-col items-start">
+        <span class="text-mask">
+          <span class="text-mask-inner text-[var(--color-black)]">Никита Рыбалко</span>
+        </span>
+        <span class="text-mask">
+          <span class="text-mask-inner delay-100">
+            <span class="text-[var(--color-yellow)]">Web</span><span class="text-[var(--color-black)]">-дизайнер и разработчик</span>
+          </span>
+        </span>
+      </h1>
+    </div>
+
+    <!-- Текст (Также обернут в маску) -->
+    <div class="col-start-1 md:col-start-2 col-span-4 md:col-span-2 pt-[2rem]">
+      <div class="text-mask">
+        <p class="text-mask-inner delay-200 text-main text-[var(--color-black)] leading-[1.07]">
+          Проектирую UI/UX интерфейсы и полностью реализую их в коде (Web, Mobile, Desktop). Сервисы должны быть красивыми, приносить пользу <span class="text-tiny text-[var(--color-gray-text)]">и деньги</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Кнопки (Добавлены классы fade-scale-blur и задержки) -->
+  <div class="absolute bottom-[2rem] left-0 w-full">
+    <div class="grid-layout w-full">
+      <div class="col-span-4 flex flex-col md:flex-row w-full gap-[1.25rem]">
+        
+        <button class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[var(--color-black)] rounded-[2rem] overflow-hidden lottie-trigger border-none cursor-pointer fade-scale-blur delay-200">
+          <div class="absolute inset-0 bg-white/0 group-hover:bg-white/16 transition-colors duration-300"></div>
+          <div class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center">
+            <lottie-player src="/lottie/icon-contacts.json" loop class="w-full h-full" background="transparent" speed="1"></lottie-player>
+          </div>
+          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-white)] whitespace-nowrap">Контакты</span>
+        </button>
+
+        <button class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[var(--color-white)] rounded-[2rem] overflow-hidden lottie-trigger border-none cursor-pointer fade-scale-blur delay-300">
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/[0.02] transition-colors duration-300"></div>
+          <div class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center">
+            <lottie-player src="/lottie/icon-portfolio.json" loop class="w-full h-full" background="transparent" speed="1"></lottie-player>
+          </div>
+          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-black)] whitespace-nowrap">Портфолио</span>
+        </button>
+
+        <button class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[rgba(255,255,255,0.16)] border border-solid border-[var(--color-white)] rounded-[2rem] overflow-hidden lottie-trigger cursor-pointer fade-scale-blur delay-400">
+          <div class="absolute inset-0 bg-white/0 group-hover:bg-white/16 transition-colors duration-300"></div>
+          <div class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center">
+            <lottie-player src="/lottie/icon-resume.json" loop class="w-full h-full" background="transparent" speed="1"></lottie-player>
+          </div>
+          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-black)] whitespace-nowrap">Скачать резюме</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+  
+</main>
