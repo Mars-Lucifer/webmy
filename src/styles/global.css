@@ -172,4 +172,26 @@ html {
       padding-right: 1.5rem; /* 32px */
     }
   }
+  @layer utilities {
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+  @keyframes heartbeat {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+  }
+
+  .group:hover .group-hover\:animate-heartbeat {
+    animation: heartbeat 0.8s ease-in-out infinite;
+  }
 }

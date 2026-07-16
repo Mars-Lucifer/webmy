@@ -66,3 +66,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+  const cards = document.querySelectorAll(".group");
+
+  cards.forEach((card) => {
+    const lottie = card.querySelector(".lottie-anim");
+    if (!lottie) return;
+
+    if (isDesktop) {
+      lottie.stop(); // На десктопе изначально стоп
+      card.addEventListener("mouseenter", () => lottie.play());
+      card.addEventListener("mouseleave", () => lottie.stop());
+    } else {
+      lottie.play(); // На мобилке играет сразу
+    }
+  });
+});

@@ -2,108 +2,136 @@
 const projects = [
   {
     title: "Mochiland",
-    description: "B2B-платформа для компании Mochiland автоматизирующая сделки поставки их товара",
+    description:
+      "B2B-платформа для компании Mochiland автоматизирующая сделки поставки их товара",
     image: "/image/port_1.webp",
     theme: "light",
     status: {
       dotColor: "bg-[rgba(0,222,96,0.60)]",
-      text: "В разработке"
-    }
+      text: "В разработке",
+    },
   },
   {
     title: "Артур Одилов",
     description: "Сайт-портфолио для профессионального фотографа Москвы",
     image: "/image/port_2.webp",
     theme: "dark",
-    status: null
+    status: null,
   },
   {
     title: "Российское Содружество Колледжей",
-    description: "Полноценная всероссийская платформа, включает множество функций для развития образовательных учреждений",
+    description:
+      "Полноценная всероссийская платформа, включает множество функций для развития образовательных учреждений",
     image: "/image/port_3.webp",
     theme: "light",
-    status: null
+    status: null,
   },
   {
     title: "Oasis",
-    description: "Полный пак для компании по озеленению, включащий фирменный стиль, сайт, AI-бота",
+    description:
+      "Полный пак для компании по озеленению, включащий фирменный стиль, сайт, AI-бота",
     image: "/image/port_4.webp",
     theme: "light",
     status: {
       dotColor: "bg-[rgba(255,26,26,0.60)]",
-      text: "Сайт временно заморожен"
-    }
+      text: "Сайт временно заморожен",
+    },
   },
   {
     title: "EnergyStart",
-    description: "Фирменный стиль и сайт компании занимающейся разработкой систем повышения эффективности ЖКХ",
+    description:
+      "Фирменный стиль и сайт компании занимающейся разработкой систем повышения эффективности ЖКХ",
     image: "/image/port_5.webp",
     theme: "light",
-    status: null
-  }
+    status: null,
+  },
 ];
 ---
 
 <!-- Главный контейнер -->
 <section class="w-full flex flex-col gap-[3.75rem] mt-[7.5rem]">
-  
   <!-- Заголовок / ПОРТФОЛИО / (в 1 колонку через сетку) -->
   <div class="grid-layout w-full">
-    <div class="col-span-1 flex justify-between items-center text-[var(--color-black)] text-[1.25rem] font-medium uppercase w-full opacity-0 reveal-trigger" data-anim="fade-scale-blur">
-    <span>/</span>
-    <span>портфолио</span>
-    <span>/</span>
+    <div
+      class="col-span-1 flex justify-between items-center text-[var(--color-black)] text-[1.25rem] font-medium uppercase w-full opacity-0 reveal-trigger"
+      data-anim="fade-scale-blur"
+    >
+      <span>/</span>
+      <span>портфолио</span>
+      <span>/</span>
+    </div>
   </div>
-  </div>
-  
+
   <!-- Сетка проектов -->
   <div class="grid-layout w-full">
-    {projects.map((project, index) => (
-      <a 
-        href="#" 
-        class={`col-span-4 md:col-span-2 group flex flex-col p-[0.25rem] rounded-[2rem] overflow-hidden opacity-0 reveal-trigger transition-transform duration-300 hover:scale-[1.02] ${project.theme === 'dark' ? 'bg-[#1F2229]' : 'bg-white'}`}
-        data-anim={`fade-scale-blur delay-${Math.min((index % 2) * 100 + 100, 300)}`}
-      >
-        <img 
-          src={project.image} 
-          alt={project.title} 
-          class="w-full aspect-[1.8] object-cover rounded-[1.75rem]" 
-          loading="lazy"
-        />
-        
-        <div class="flex flex-col p-[1.5rem] gap-[0.5rem] justify-center items-start h-full">
-          
-          <div class="flex flex-col gap-[0.5rem] w-full">
-            
-            <div class="flex justify-between items-center gap-[0.75rem] w-full">
-              <h3 class={`flex-1 text-[1.5rem] font-medium leading-[1.07] ${project.theme === 'dark' ? 'text-[#EDEEF0]' : 'text-[#1F2229]'}`}>
-                {project.title}
-              </h3>
-              
-              <div class={`w-[1.5rem] h-[1.5rem] relative shrink-0 opacity-50 group-hover:opacity-100 transition-opacity duration-300 ${project.theme === 'dark' ? 'text-[#EDEEF0]' : 'text-[#1F2229]'}`}>
-                <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-current">
-                  <path d="M7 7H17V17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M7 17L17 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+    {
+      projects.map((project, index) => (
+        <a
+          href="#"
+          class={`col-span-4 md:col-span-2 group flex flex-col p-[0.25rem] rounded-[2rem] overflow-hidden opacity-0 reveal-trigger transition-transform duration-300 hover:scale-[1.02] ${project.theme === "dark" ? "bg-[#1F2229]" : "bg-white"}`}
+          data-anim={`fade-scale-blur delay-${Math.min((index % 2) * 100 + 100, 300)}`}
+        >
+          <img
+            src={project.image}
+            alt={project.title}
+            class="w-full aspect-[1.8] object-cover rounded-[1.75rem]"
+            loading="lazy"
+          />
+
+          <div class="flex flex-col p-[1.5rem] gap-[0.5rem] justify-center items-start h-full">
+            <div class="flex flex-col gap-[0.5rem] w-full">
+              <div class="flex justify-between items-center gap-[0.75rem] w-full">
+                <h3
+                  class={`flex-1 text-[1.5rem] font-medium leading-[1.07] ${project.theme === "dark" ? "text-[#EDEEF0]" : "text-[#1F2229]"}`}
+                >
+                  {project.title}
+                </h3>
+
+                <div
+                  class={`w-[1.5rem] h-[1.5rem] relative shrink-0 opacity-50 group-hover:opacity-100 transition-opacity duration-300 ${project.theme === "dark" ? "text-[#EDEEF0]" : "text-[#1F2229]"}`}
+                >
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="stroke-current"
+                  >
+                    <path
+                      d="M7 7H17V17"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7 17L17 7"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
               </div>
+
+              <p class="text-[#828894] text-[1rem] font-normal leading-[1.07] max-w-[24rem]">
+                {project.description}
+              </p>
             </div>
-            
-            <p class="text-[#828894] text-[1rem] font-normal leading-[1.07] max-w-[24rem]">
-              {project.description}
-            </p>
+
+            {project.status && (
+              <div class="flex items-center gap-[0.5rem] mt-auto pt-[0.25rem]">
+                <div
+                  class={`w-[0.5rem] h-[0.5rem] rounded-full ${project.status.dotColor}`}
+                />
+                <span class="text-[rgba(130,136,147,0.60)] text-[1rem] font-normal leading-[1.07]">
+                  {project.status.text}
+                </span>
+              </div>
+            )}
           </div>
-          
-          {project.status && (
-            <div class="flex items-center gap-[0.5rem] mt-auto pt-[0.25rem]">
-              <div class={`w-[0.5rem] h-[0.5rem] rounded-full ${project.status.dotColor}`}></div>
-              <span class="text-[rgba(130,136,147,0.60)] text-[1rem] font-normal leading-[1.07]">
-                {project.status.text}
-              </span>
-            </div>
-          )}
-          
-        </div>
-      </a>
-    ))}
+        </a>
+      ))
+    }
   </div>
 </section>
