@@ -1,49 +1,56 @@
-<!-- Главный контейнер -->
-<section class="w-full flex flex-col gap-[3.75rem] mt-[7.5rem]">
-  
-  <!-- Заголовок -->
+---
+---
+
+<section id="competencies" class="w-full flex flex-col gap-[3.75rem] mt-[7.5rem] scroll-mt-[7.5rem]">
   <div class="grid-layout w-full">
-    <div class="col-span-1 flex justify-between items-center text-[var(--color-black)] text-[1.25rem] font-medium uppercase w-full opacity-0 reveal-trigger" data-anim="fade-scale-blur">
+    <div
+      class="col-span-1 flex justify-between items-center text-[var(--color-black)] text-[1.25rem] font-medium uppercase w-full opacity-0 reveal-trigger"
+      data-anim="fade-scale-blur"
+    >
       <span>/</span>
-      <span>Компетенции</span>
+      <span data-i18n="competencies.sectionLabel">Компетенции</span>
       <span>/</span>
     </div>
   </div>
-  
-  <!-- ДОБАВЛЕН py-[20px] для фикса обрезки анимации при ховере -->
+
   <div class="flex overflow-x-auto md:grid md:grid-cols-3 gap-[1.25rem] px-[1.5rem] md:px-[3.75rem] py-[20px] w-full snap-x snap-mandatory hide-scrollbar">
-    
-    <!-- Карточка 1: Дизайн (ДОБАВЛЕН класс blur-border) -->
     <div class="group blur-border relative flex flex-col justify-between p-[2.25rem] min-w-[85vw] md:min-w-0 h-[31.25rem] rounded-[2rem] overflow-hidden transition-transform duration-500 ease-out md:hover:-translate-y-[20px] snap-center opacity-0 reveal-trigger" data-anim="fade-scale-blur delay-100">
-      
-      <!-- Фоновое видео -->
       <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
         <source src="/video/1.webm" type="video/webm" />
       </video>
-      
-      <!-- Контент -->
+
       <div class="relative z-20 flex flex-col justify-between h-full">
         <div class="w-[4rem] h-[4rem]">
           <lottie-player src="/lottie/icon-portfolio_w.json" background="transparent" speed="1" loop class="w-full h-full lottie-anim"></lottie-player>
         </div>
-        
+
         <div class="flex flex-col gap-[1rem]">
-          <h3 class="text-white text-[3rem] font-normal leading-[1.07]">Дизайн</h3>
-          
+          <h3 class="text-white text-[3rem] font-normal leading-[1.07]" data-i18n="competencies.cards.design.title">
+            Дизайн
+          </h3>
+
           <div class="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
             <div class="overflow-hidden">
               <div class="flex flex-wrap gap-[0.25rem] pt-[0.25rem]">
                 <div class="px-[1rem] py-[0.625rem] bg-[rgba(13,17,26,0.20)] rounded-full flex justify-center items-center overflow-hidden">
-                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-100">Web-дизайн</span>
+                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-100" data-i18n="competencies.cards.design.tags.0">
+                    Web-дизайн
+                  </span>
                 </div>
                 <div class="px-[1rem] py-[0.625rem] bg-[rgba(13,17,26,0.20)] rounded-full flex justify-center items-center overflow-hidden">
-                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-200">Презентации</span>
+                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-200" data-i18n="competencies.cards.design.tags.1">
+                    Презентации
+                  </span>
                 </div>
                 <div class="px-[1rem] py-[0.625rem] bg-[rgba(13,17,26,0.20)] rounded-full flex justify-center items-center overflow-hidden">
-                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-300">Типографика</span>
+                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-300" data-i18n="competencies.cards.design.tags.2">
+                    Типографика
+                  </span>
                 </div>
                 <div class="px-[1rem] py-[0.625rem] bg-[rgba(13,17,26,0.20)] rounded-full flex justify-center items-center overflow-hidden">
-                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-400">Анимации</span>
+                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-400" data-i18n="competencies.cards.design.tags.3">
+                    Анимации
+                  </span>
                 </div>
               </div>
             </div>
@@ -52,35 +59,43 @@
       </div>
     </div>
 
-    <!-- Карточка 2: Разработка (ДОБАВЛЕН класс blur-border) -->
     <div class="group blur-border relative flex flex-col justify-between p-[2.25rem] min-w-[85vw] md:min-w-0 h-[31.25rem] rounded-[2rem] overflow-hidden transition-transform duration-500 ease-out md:hover:-translate-y-[20px] snap-center opacity-0 reveal-trigger" data-anim="fade-scale-blur delay-200">
-      
       <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
         <source src="/video/2.webm" type="video/webm" />
       </video>
-      
+
       <div class="relative z-20 flex flex-col justify-between h-full">
         <div class="w-[4rem] h-[4rem]">
           <lottie-player src="/lottie/icon-resume_w.json" background="transparent" speed="1" loop class="w-full h-full lottie-anim"></lottie-player>
         </div>
-        
+
         <div class="flex flex-col gap-[1rem]">
-          <h3 class="text-white text-[3rem] font-normal leading-[1.07]">Разработка</h3>
-          
+          <h3 class="text-white text-[3rem] font-normal leading-[1.07]" data-i18n="competencies.cards.development.title">
+            Разработка
+          </h3>
+
           <div class="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
             <div class="overflow-hidden">
               <div class="flex flex-wrap gap-[0.25rem] pt-[0.25rem]">
                 <div class="px-[1rem] py-[0.625rem] bg-[rgba(13,17,26,0.20)] rounded-full flex justify-center items-center overflow-hidden">
-                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-100">Web-платформы</span>
+                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-100" data-i18n="competencies.cards.development.tags.0">
+                    Web-платформы
+                  </span>
                 </div>
                 <div class="px-[1rem] py-[0.625rem] bg-[rgba(13,17,26,0.20)] rounded-full flex justify-center items-center overflow-hidden">
-                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-200">Лендинги</span>
+                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-200" data-i18n="competencies.cards.development.tags.1">
+                    Лендинги
+                  </span>
                 </div>
                 <div class="px-[1rem] py-[0.625rem] bg-[rgba(13,17,26,0.20)] rounded-full flex justify-center items-center overflow-hidden">
-                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-300">Mobile App</span>
+                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-300" data-i18n="competencies.cards.development.tags.2">
+                    Mobile App
+                  </span>
                 </div>
                 <div class="px-[1rem] py-[0.625rem] bg-[rgba(13,17,26,0.20)] rounded-full flex justify-center items-center overflow-hidden">
-                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-400">Desctop App</span>
+                  <span class="text-white text-[1.25rem] font-medium md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-400" data-i18n="competencies.cards.development.tags.3">
+                    Desktop App
+                  </span>
                 </div>
               </div>
             </div>
@@ -89,25 +104,25 @@
       </div>
     </div>
 
-    <!-- Карточка 3: Прочее (ДОБАВЛЕН класс blur-border) -->
     <div class="group blur-border relative flex flex-col justify-between p-[2.25rem] min-w-[85vw] md:min-w-0 h-[31.25rem] rounded-[2rem] overflow-hidden transition-transform duration-500 ease-out md:hover:-translate-y-[20px] snap-center opacity-0 reveal-trigger" data-anim="fade-scale-blur delay-300">
-      
       <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
         <source src="/video/3.webm" type="video/webm" />
       </video>
-      
+
       <div class="relative z-20 flex flex-col justify-between h-full">
         <div class="w-[4rem] h-[4rem]">
           <lottie-player src="/lottie/icon-contacts.json" background="transparent" speed="1" loop class="w-full h-full lottie-anim"></lottie-player>
         </div>
-        
+
         <div class="flex flex-col gap-[1rem]">
-          <h3 class="text-white text-[3rem] font-normal leading-[1.07]">Прочее</h3>
-          
+          <h3 class="text-white text-[3rem] font-normal leading-[1.07]" data-i18n="competencies.cards.other.title">
+            Прочее
+          </h3>
+
           <div class="grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
             <div class="overflow-hidden">
               <div class="pt-[0.25rem] overflow-hidden">
-                <p class="text-white text-[1.25rem] font-medium leading-[1.07] md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-100">
+                <p class="text-white text-[1.25rem] font-medium leading-[1.07] md:translate-y-[110%] md:group-hover:translate-y-0 transition-transform duration-500 ease-out delay-100" data-i18n="competencies.cards.other.text">
                   Пишите если у вас есть какая-то другая идея
                 </p>
               </div>
@@ -116,6 +131,5 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>

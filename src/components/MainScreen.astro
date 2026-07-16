@@ -1,119 +1,198 @@
 ---
 ---
-<!-- Хедер -->
-<header 
-  id="header" 
+
+<header
+  id="header"
   class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1600px] z-50 transition-all duration-300 py-[1.375rem] px-[1.25rem] md:px-[3.75rem]"
 >
   <div id="header-inner" class="flex items-center justify-between w-full transition-all duration-300">
-    
-    <!-- Логотип -->
-    <div class="flex flex-col gap-[0.25rem] fade-scale-blur">
+    <a href="#home" class="flex flex-col gap-[0.25rem] fade-scale-blur">
       <div class="font-medium text-[1.5rem] leading-[1.07] tracking-tight uppercase">NIKITA.RYBALKO</div>
       <div class="flex w-full justify-between items-center font-medium text-[1rem] leading-[1.07]">
         <span class="text-[var(--color-gray-text)]">/</span>
         <span>WEB-DESIGNER</span>
       </div>
+    </a>
+
+    <div class="hidden md:flex items-center gap-[3.125rem] fade-scale-blur delay-100">
+      <nav class="flex items-center gap-[3.125rem]">
+        <a href="#skills" data-nav-link class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll">
+          <span class="hover-scroll-main" data-i18n="nav.skills">Навыки</span>
+          <span class="hover-scroll-hover text-[var(--color-black)]" data-i18n="nav.skills">Навыки</span>
+        </a>
+        <a href="#portfolio" data-nav-link class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll">
+          <span class="hover-scroll-main" data-i18n="nav.portfolio">Портфолио</span>
+          <span class="hover-scroll-hover text-[var(--color-black)]" data-i18n="nav.portfolio">Портфолио</span>
+        </a>
+        <a href="#competencies" data-nav-link class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll">
+          <span class="hover-scroll-main" data-i18n="nav.competencies">Компетенции</span>
+          <span class="hover-scroll-hover text-[var(--color-black)]" data-i18n="nav.competencies">Компетенции</span>
+        </a>
+        <a href="#contact" data-nav-link class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll">
+          <span class="hover-scroll-main" data-i18n="nav.contacts">Контакты</span>
+          <span class="hover-scroll-hover text-[var(--color-black)]" data-i18n="nav.contacts">Контакты</span>
+        </a>
+      </nav>
+
+      <div class="inline-flex items-center gap-[0.25rem] rounded-[100px] bg-[var(--color-white)] p-[4px]" data-language-switcher>
+        <button
+          type="button"
+          class="rounded-[100px] px-[12px] py-[10px] text-[16px] font-medium leading-[17.12px] transition-colors duration-300"
+          data-lang-option="ru"
+        >
+          Ru
+        </button>
+        <button
+          type="button"
+          class="rounded-[100px] px-[12px] py-[10px] text-[16px] font-medium leading-[17.12px] transition-colors duration-300"
+          data-lang-option="sr"
+        >
+          Sr
+        </button>
+        <button
+          type="button"
+          class="rounded-[100px] px-[12px] py-[10px] text-[16px] font-medium leading-[17.12px] transition-colors duration-300"
+          data-lang-option="en"
+        >
+          En
+        </button>
+      </div>
     </div>
 
-    <!-- Десктопное меню (Добавлен эффект hover-scroll) -->
-    <nav class="hidden md:flex items-center gap-[3.125rem] fade-scale-blur delay-100">
-      <a href="#" class="link-small text-[var(--color-gray-text)] hover:text-[var(--color-black)] transition-colors hover-scroll">
-        <span class="hover-scroll-main">Навыки</span>
-        <span class="hover-scroll-hover text-[var(--color-black)]">Навыки</span>
-      </a>
-      <a href="#" class="link-small text-[var(--color-gray-text)] hover:text-[var(--color-black)] transition-colors hover-scroll">
-        <span class="hover-scroll-main">Портфолио</span>
-        <span class="hover-scroll-hover text-[var(--color-black)]">Портфолио</span>
-      </a>
-      <a href="#" class="link-small text-[var(--color-gray-text)] hover:text-[var(--color-black)] transition-colors hover-scroll">
-        <span class="hover-scroll-main">Компетенции</span>
-        <span class="hover-scroll-hover text-[var(--color-black)]">Компетенции</span>
-      </a>
-      <a href="#" class="link-small text-[var(--color-gray-text)] hover:text-[var(--color-black)] transition-colors hover-scroll">
-        <span class="hover-scroll-main">Контакты</span>
-        <span class="hover-scroll-hover text-[var(--color-black)]">Контакты</span>
-      </a>
-    </nav>
-
-    <!-- Бургер -->
-    <button id="burger-btn" class="md:hidden z-50 relative w-8 h-8 flex justify-center items-center cursor-pointer border-none bg-transparent fade-scale-blur delay-100">
-      <span class="absolute w-full h-[2px] bg-[var(--color-black)] transition-transform duration-300 -translate-y-1.5"></span>
-      <span class="absolute w-full h-[2px] bg-[var(--color-black)] transition-transform duration-300 translate-y-1.5"></span>
+    <button
+      id="burger-btn"
+      class="md:hidden z-50 relative w-8 h-8 flex justify-center items-center cursor-pointer border-none bg-transparent fade-scale-blur delay-100"
+      type="button"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <span data-burger-line="top" class="absolute w-full h-[2px] bg-[var(--color-black)] transition-transform duration-300 -translate-y-1.5"></span>
+      <span data-burger-line="bottom" class="absolute w-full h-[2px] bg-[var(--color-black)] transition-transform duration-300 translate-y-1.5"></span>
     </button>
-
   </div>
 </header>
 
-<!-- Мобильное фуллскрин-меню -->
-<div id="mobile-menu" class="fixed inset-0 bg-[var(--color-back)]/80 backdrop-blur-[32px] z-40 opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center justify-center gap-[2rem]">
-  <a href="#" class="text-[2rem] font-medium text-[var(--color-black)]">Навыки</a>
-  <a href="#" class="text-[2rem] font-medium text-[var(--color-black)]">Портфолио</a>
-  <a href="#" class="text-[2rem] font-medium text-[var(--color-black)]">Компетенции</a>
-  <a href="#" class="text-[2rem] font-medium text-[var(--color-black)]">Контакты</a>
+<div
+  id="mobile-menu"
+  class="fixed inset-0 bg-[var(--color-back)]/80 backdrop-blur-[32px] z-40 opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center justify-center gap-[2rem] px-[1rem]"
+>
+  <nav class="flex flex-col items-center gap-[2rem]">
+    <a href="#skills" data-mobile-nav-link class="text-[2rem] font-medium text-[var(--color-black)]">
+      <span data-i18n="nav.skills">Навыки</span>
+    </a>
+    <a href="#portfolio" data-mobile-nav-link class="text-[2rem] font-medium text-[var(--color-black)]">
+      <span data-i18n="nav.portfolio">Портфолио</span>
+    </a>
+    <a href="#competencies" data-mobile-nav-link class="text-[2rem] font-medium text-[var(--color-black)]">
+      <span data-i18n="nav.competencies">Компетенции</span>
+    </a>
+    <a href="#contact" data-mobile-nav-link class="text-[2rem] font-medium text-[var(--color-black)]">
+      <span data-i18n="nav.contacts">Контакты</span>
+    </a>
+  </nav>
+
+  <div class="absolute bottom-[1rem] left-[1rem] right-[1rem] rounded-[100px] bg-[var(--color-white)] p-[4px] flex items-center gap-[4px]">
+    <button
+      type="button"
+      class="flex-1 rounded-[100px] px-[12px] py-[16px] text-[1.35rem] font-medium leading-[1.07] transition-colors duration-300"
+      data-lang-option="ru"
+    >
+      Ru
+    </button>
+    <button
+      type="button"
+      class="flex-1 rounded-[100px] px-[12px] py-[16px] text-[1.35rem] font-medium leading-[1.07] transition-colors duration-300"
+      data-lang-option="sr"
+    >
+      Sr
+    </button>
+    <button
+      type="button"
+      class="flex-1 rounded-[100px] px-[12px] py-[16px] text-[1.35rem] font-medium leading-[1.07] transition-colors duration-300"
+      data-lang-option="en"
+    >
+      En
+    </button>
+  </div>
 </div>
 
-<!-- Главный экран -->
-<main class="w-full max-w-[1600px] mx-auto h-[100vh] relative pt-[8rem] box-border">
-  
+<main id="home" class="w-full max-w-[1600px] mx-auto h-[100vh] relative pt-[8rem] box-border">
   <div class="grid-layout w-full">
-    
-    <!-- H1 (Текст обернут в text-mask) -->
     <div class="col-span-4">
       <h1 class="h1 flex flex-col items-start">
         <span class="text-mask">
-          <span class="text-mask-inner text-[var(--color-black)]">Никита Рыбалко</span>
+          <span class="text-mask-inner text-[var(--color-black)]" data-i18n="hero.name">Никита Рыбалко</span>
         </span>
         <span class="text-mask">
           <span class="text-mask-inner delay-100 whitespace-normal">
-            <span class="text-[var(--color-yellow)]">Web</span><span class="text-[var(--color-black)]">-<wbr>дизайнер и разработчик</span>
+            <span class="text-[var(--color-yellow)]" data-i18n="hero.web">Web-</span>
+            <wbr />
+            <span class="text-[var(--color-black)]" data-i18n="hero.roleSuffix">дизайнер и разработчик</span>
           </span>
         </span>
       </h1>
     </div>
 
-    <!-- Текст (Также обернут в маску) -->
     <div class="col-start-1 md:col-start-2 col-span-4 md:col-span-2 pt-[2rem]">
       <div class="text-mask">
-        <p class="text-mask-inner delay-200 text-main text-[var(--color-black)] leading-[1.07]">
-          Проектирую UI/UX интерфейсы и полностью реализую их в коде (Web, Mobile, Desktop). Сервисы должны быть красивыми, приносить пользу <span class="text-tiny text-[var(--color-gray-text)]">и деньги</span>
+        <p
+          class="text-mask-inner delay-200 text-main text-[var(--color-black)] leading-[1.07]"
+          data-i18n="hero.description"
+          data-i18n-html="true"
+        >
+          Проектирую UI/UX интерфейсы и полностью реализую их в коде (Web, Mobile, Desktop). Сервисы должны быть красивыми, приносить пользу и
+          <span class="text-tiny text-[var(--color-gray-text)]">деньги</span>
         </p>
       </div>
     </div>
-
   </div>
 
-  <!-- Кнопки (Добавлены классы fade-scale-blur и задержки) -->
   <div class="absolute bottom-[2rem] left-0 w-full">
     <div class="grid-layout w-full">
       <div class="col-span-4 flex flex-col md:flex-row w-full gap-[1.25rem]">
-        
-        <button class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[var(--color-black)] rounded-[2rem] overflow-hidden lottie-trigger border-none cursor-pointer fade-scale-blur delay-200">
+        <button
+          type="button"
+          class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[var(--color-black)] rounded-[2rem] overflow-hidden lottie-trigger border-none cursor-pointer fade-scale-blur delay-200"
+          data-scroll-to="contact"
+        >
           <div class="absolute inset-0 bg-white/0 group-hover:bg-white/16 transition-colors duration-300"></div>
           <div class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center">
             <lottie-player src="/lottie/icon-contacts.json" loop class="w-full h-full" background="transparent" speed="1"></lottie-player>
           </div>
-          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-white)] whitespace-nowrap">Контакты</span>
+          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-white)] whitespace-nowrap" data-i18n="hero.contactsButton">
+            Контакты
+          </span>
         </button>
 
-        <button class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[var(--color-white)] rounded-[2rem] overflow-hidden lottie-trigger border-none cursor-pointer fade-scale-blur delay-300">
+        <button
+          type="button"
+          class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[var(--color-white)] rounded-[2rem] overflow-hidden lottie-trigger border-none cursor-pointer fade-scale-blur delay-300"
+          data-scroll-to="portfolio"
+        >
           <div class="absolute inset-0 bg-black/0 group-hover:bg-black/[0.02] transition-colors duration-300"></div>
           <div class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center">
             <lottie-player src="/lottie/icon-portfolio.json" loop class="w-full h-full" background="transparent" speed="1"></lottie-player>
           </div>
-          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-black)] whitespace-nowrap">Портфолио</span>
+          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-black)] whitespace-nowrap" data-i18n="hero.portfolioButton">
+            Портфолио
+          </span>
         </button>
 
-        <button class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[rgba(255,255,255,0.16)] border border-solid border-[var(--color-white)] rounded-[2rem] overflow-hidden lottie-trigger cursor-pointer fade-scale-blur delay-400">
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[rgba(255,255,255,0.16)] border border-solid border-[var(--color-white)] rounded-[2rem] overflow-hidden lottie-trigger cursor-pointer fade-scale-blur delay-400"
+        >
           <div class="absolute inset-0 bg-white/0 group-hover:bg-white/16 transition-colors duration-300"></div>
           <div class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center">
             <lottie-player src="/lottie/icon-resume.json" loop class="w-full h-full" background="transparent" speed="1"></lottie-player>
           </div>
-          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-black)] whitespace-nowrap">Скачать резюме</span>
-        </button>
-
+          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-black)] whitespace-nowrap" data-i18n="hero.resumeButton">
+            Скачать резюме
+          </span>
+        </a>
       </div>
     </div>
   </div>
-  
 </main>

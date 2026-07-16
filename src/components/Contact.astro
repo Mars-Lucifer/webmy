@@ -1,87 +1,68 @@
-<!-- Секция Контакты -->
-<section class="w-full flex flex-col gap-[3.75rem] mt-[7.5rem] mb-[7.5rem]">
-  <!-- Заголовок / КОНТАКТЫ / -->
+---
+---
+
+<section id="contact" class="w-full flex flex-col gap-[3.75rem] mt-[7.5rem] mb-[7.5rem] scroll-mt-[7.5rem]">
   <div class="grid-layout w-full">
-    <div
-      class="col-span-1 flex justify-between items-center text-[var(--color-black)] text-[1.25rem] font-medium uppercase w-full opacity-0 reveal-trigger"
-      data-anim="fade-scale-blur"
-    >
+    <div class="col-span-1 flex justify-between items-center text-[var(--color-black)] text-[1.25rem] font-medium uppercase w-full opacity-0 reveal-trigger" data-anim="fade-scale-blur">
       <span>/</span>
-      <span>контакты</span>
+      <span data-i18n="contact.sectionLabel">контакты</span>
       <span>/</span>
     </div>
   </div>
 
   <div class="grid-layout w-full">
     <div class="col-span-4 flex flex-col gap-[2.5rem]">
-      <!-- Главный заголовок -->
       <h2
         class="text-[3rem] font-normal leading-[1.07] text-[var(--color-black)] opacity-0 reveal-trigger"
         data-anim="fade-scale-blur delay-100"
+        data-i18n="contact.heading"
       >
         Готов обсудить вашу задумку
       </h2>
 
-      <!-- Контейнер с карточками -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-[1.25rem]">
-        <!-- Левая колонка (Контакты - тянется на 100% высоты) -->
-        <div
-          class="flex flex-col gap-[1.25rem] h-full opacity-0 reveal-trigger"
-          data-anim="fade-scale-blur delay-200"
-        >
+        <div class="flex flex-col gap-[1.25rem] h-full opacity-0 reveal-trigger" data-anim="fade-scale-blur delay-200">
           <a
             href="tel:+79955376981"
+            target="_blank"
+            rel="noopener noreferrer"
             class="flex-1 flex justify-center items-center p-[2rem] bg-[rgba(255,255,255,0.16)] border border-solid border-white rounded-[2rem] hover:bg-[rgba(255,255,255,0.4)] transition-colors duration-300 min-h-[6rem]"
           >
-            <span
-              class="text-[2rem] font-medium text-[var(--color-black)] text-center leading-[1.07]"
-              >+7 (995) 537-69-81</span
-            >
+            <span class="text-[2rem] font-medium text-[var(--color-black)] text-center leading-[1.07]">+7 (995) 537-69-81</span>
           </a>
 
           <a
             href="tel:+381621832912"
+            target="_blank"
+            rel="noopener noreferrer"
             class="flex-1 flex justify-center items-center p-[2rem] bg-[rgba(255,255,255,0.16)] border border-solid border-white rounded-[2rem] hover:bg-[rgba(255,255,255,0.4)] transition-colors duration-300 min-h-[6rem]"
           >
-            <span
-              class="text-[2rem] font-medium text-[var(--color-black)] text-center leading-[1.07]"
-              >+381 62 183-29-12</span
-            >
+            <span class="text-[2rem] font-medium text-[var(--color-black)] text-center leading-[1.07]">+381 62 183-29-12</span>
           </a>
 
           <a
             href="mailto:nikitarybalko897@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             class="flex-1 flex justify-center items-center p-[2rem] bg-[rgba(255,255,255,0.16)] border border-solid border-white rounded-[2rem] hover:bg-[rgba(255,255,255,0.4)] transition-colors duration-300 min-h-[6rem]"
           >
-            <span
-              class="text-[1.5rem] sm:text-[2rem] font-medium text-[var(--color-black)] text-center leading-[1.07] break-all sm:break-normal"
-              >nikitarybalko897@gmail.com</span
-            >
+            <span class="text-[1.5rem] sm:text-[2rem] font-medium text-[var(--color-black)] text-center leading-[1.07] break-all sm:break-normal">nikitarybalko897@gmail.com</span>
           </a>
         </div>
 
-        <!-- Правая колонка (Соцсети - задает общую высоту) -->
-        <div
-          class="flex flex-col gap-[1.25rem] h-full opacity-0 reveal-trigger"
-          data-anim="fade-scale-blur delay-300"
-        >
-          <!-- Телеграмм канал (Высота 1/3 или ~200px) -->
+        <div class="flex flex-col gap-[1.25rem] h-full opacity-0 reveal-trigger" data-anim="fade-scale-blur delay-300">
           <a
-            href="#"
+            href="https://t.me/luci_industries"
+            target="_blank"
+            rel="noopener noreferrer"
             class="group flex flex-col justify-between p-[2rem] bg-[#29A9EB] rounded-[2rem] min-h-[12.5rem] lg:h-[12.5rem] transition-transform duration-300 hover:scale-[1.02]"
           >
-            <div
-              class="flex justify-between items-start w-full relative z-10 gap-4"
-            >
-              <span
-                class="text-white text-[1.25rem] font-medium max-w-[60%] leading-[1.07]"
-                >Личный блог про мою жизнь и работу</span
-              >
+            <div class="flex justify-between items-start w-full relative z-10 gap-4">
+              <span class="text-white text-[1.25rem] font-medium max-w-[60%] leading-[1.07]" data-i18n="contact.telegramBlog">
+                Личный блог про мою жизнь и работу
+              </span>
 
-              <!-- Твой чистый SVG без обводки -->
-              <div
-                class="w-[1.5rem] h-[1.5rem] relative shrink-0 text-white opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-              >
+              <div class="w-[1.5rem] h-[1.5rem] relative shrink-0 text-white opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                 <svg
                   width="100%"
                   height="100%"
@@ -90,69 +71,44 @@
                   xmlns="http://www.w3.org/2000/svg"
                   class="stroke-current"
                 >
-                  <path
-                    d="M7 7H17V17"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></path>
-                  <path
-                    d="M7 17L17 7"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></path>
+                  <path d="M7 7H17V17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M7 17L17 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </div>
             </div>
-            <h3
-              class="text-white text-[3rem] font-normal leading-[1.07] relative z-10 mt-[2rem] lg:mt-0"
-            >
+            <h3 class="text-white text-[3rem] font-normal leading-[1.07] relative z-10 mt-[2rem] lg:mt-0" data-i18n="contact.telegramChannelTitle">
               Телеграмм канал
             </h3>
           </a>
 
-          <!-- Мессенджеры (Нижний ряд) -->
           <div class="flex flex-col sm:flex-row gap-[1.25rem] flex-1">
-            <!-- Telegram -->
             <a
-              href="#"
+              href="https://t.me/Mars_Lucifer"
+              target="_blank"
+              rel="noopener noreferrer"
               class="flex-1 group flex flex-col justify-between p-[2rem] bg-white rounded-[2rem] min-h-[12.5rem] lg:h-[12.5rem] transition-transform duration-300 hover:scale-[1.05]"
             >
-              <img
-                src="/icon/tg.png"
-                alt="Telegram"
-                class="w-[3rem] h-[3rem] object-contain group-hover:-rotate-12 transition-transform duration-300"
-              />
+              <img src="/icon/tg.png" alt="Telegram" class="w-[3rem] h-[3rem] object-contain group-hover:-rotate-12 transition-transform duration-300" />
               <div class="flex flex-col gap-[0.5rem] mt-[2rem] lg:mt-0">
-                <span
-                  class="text-[2rem] font-medium text-[var(--color-black)] leading-[1.07]"
-                  >Телеграмм</span
-                >
-                <span
-                  class="text-[1rem] font-medium text-[var(--color-gray-text)] leading-[1.07]"
-                  >@Mars_Lucifer</span
-                >
+                <span class="text-[2rem] font-medium text-[var(--color-black)] leading-[1.07]" data-i18n="contact.telegramAccountTitle">
+                  Телеграмм
+                </span>
+                <span class="text-[1rem] font-medium text-[var(--color-gray-text)] leading-[1.07]">@Mars_Lucifer</span>
               </div>
             </a>
 
-            <!-- WhatsApp -->
             <a
-              href="#"
+              href="https://wa.me/381621832912"
+              target="_blank"
+              rel="noopener noreferrer"
               class="flex-1 group flex flex-col justify-between p-[2rem] bg-white rounded-[2rem] min-h-[12.5rem] lg:h-[12.5rem] transition-transform duration-300 hover:scale-[1.05]"
             >
-              <img
-                src="/icon/wt.png"
-                alt="WhatsApp"
-                class="w-[3rem] h-[3rem] object-contain group-hover:-rotate-12 transition-transform duration-300"
-              />
+              <img src="/icon/wt.png" alt="WhatsApp" class="w-[3rem] h-[3rem] object-contain group-hover:-rotate-12 transition-transform duration-300" />
               <div class="flex flex-col gap-[0.5rem] mt-[2rem] lg:mt-0">
-                <span
-                  class="text-[2rem] font-medium text-[var(--color-black)] leading-[1.07]"
-                  >WhatsApp</span
-                >
-                <span
-                  class="text-[1rem] font-medium text-[var(--color-gray-text)] leading-[1.07]"
-                  >@mars_lucifer</span
-                >
+                <span class="text-[2rem] font-medium text-[var(--color-black)] leading-[1.07]" data-i18n="contact.whatsappTitle">
+                  WhatsApp
+                </span>
+                <span class="text-[1rem] font-medium text-[var(--color-gray-text)] leading-[1.07]">@mars_lucifer</span>
               </div>
             </a>
           </div>

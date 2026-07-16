@@ -1,5 +1,6 @@
 ---
-import '../styles/global.css'; // Подключение стилей
+import "../styles/global.css";
+
 const { title } = Astro.props;
 ---
 
@@ -9,12 +10,21 @@ const { title } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <script is:inline src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap"
+    />
+    <script
+      is:inline
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
   </head>
   <body class="bg-[var(--color-back)] overflow-x-hidden text-[var(--color-black)]">
     <slot />
-    
-    <!-- Подключение вынесенного JS -->
-    <script src="../scripts/main.js"></script>
+    <script type="module">
+      import "../scripts/main.js";
+    </script>
   </body>
 </html>
