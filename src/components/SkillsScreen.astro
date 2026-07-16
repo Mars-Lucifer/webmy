@@ -1,0 +1,302 @@
+---
+const designSkills = [
+  { name: "Figma", icon: "/skills/figma.svg" },
+  { name: "Affinity", icon: "/skills/affinity.png" },
+  { name: "Google Presentation", icon: "/skills/google-presentation.png" },
+  { name: "AI Generation", icon: "/skills/ai-generation.svg" }
+];
+
+const devSkills = [
+  { name: "NextJS", icon: "/skills/nextjs.png" },
+  { name: "Python", icon: "/skills/python.png" },
+  { name: "JavaScript", icon: "/skills/javascript.png" },
+  { name: "Kotlin", icon: "/skills/kotlin.png" },
+  { name: "ElectronJS", icon: "/skills/electronjs.png" },
+  { name: "n8n", icon: "/skills/n8n.png" }
+];
+---
+
+<section class="w-full max-w-[106rem] mx-auto flex px-[2rem] max-sm:px-[1rem] mt-[7.5rem]">
+  <div class="w-full bg-[var(--color-black)] p-[3rem] rounded-[2.5rem] overflow-hidden">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-x-[1.25rem] gap-y-[3.75rem] w-full">
+      
+      <!-- Заголовок -->
+      <div class="col-span-1 flex justify-between items-center text-[var(--color-white)] text-[1.25rem] font-medium uppercase w-full opacity-0 reveal-trigger" data-anim="fade-scale-blur">
+        <span>/</span>
+        <span>навыки</span>
+        <span>/</span>
+      </div>
+      
+      <div class="hidden lg:block col-span-3"></div>
+
+      <!-- Контейнер Пинг-понг -->
+      <!-- Убран цвет фона, высота 100% -->
+      <div id="pong-container" class="col-span-1 relative w-full h-full min-h-[20rem] lg:min-h-0 overflow-hidden opacity-0 reveal-trigger" data-anim="fade-scale-blur delay-100 touch-none">
+        
+        <!-- Плашка победы (Вы супер!) -->
+        <div id="win-badge" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-[1.5rem] py-[1.25rem] bg-[rgba(255,93,25,0.5)] rounded-[1.25rem] backdrop-blur-[6px] flex justify-center items-center opacity-0 scale-90 pointer-events-none transition-all duration-300 z-20">
+          <div class="text-[var(--color-white)] text-[1.25rem] font-medium leading-[1.07] whitespace-nowrap">Вы супер!</div>
+        </div>
+
+        <div id="pong-ai" class="absolute bg-white rounded-full transition-all duration-100 ease-out z-10"></div>
+        <div id="pong-player" class="absolute bg-[#828894] hover:bg-white active:bg-white rounded-full transition-colors duration-200 cursor-grab active:cursor-grabbing z-10"></div>
+        <div id="pong-ball" class="absolute bg-[var(--color-yellow)] rounded-full w-[1.25rem] h-[1.25rem] z-10"></div>
+      </div>
+
+      <!-- Блок с навыками -->
+      <div class="col-span-1 lg:col-span-3 flex flex-col gap-[3.75rem]">
+        
+        <!-- Дизайн -->
+        <div class="flex flex-col items-start gap-[2.5rem]">
+          <div class="text-mask">
+            <h2 class="text-[var(--color-white)] text-[3rem] font-normal leading-[1.07] opacity-0 reveal-trigger" data-anim="text-mask-inner delay-100">Дизайн</h2>
+          </div>
+          <div class="flex flex-wrap items-center gap-[0.25rem]">
+            {designSkills.map((skill, index) => (
+              <div 
+                class="flex items-center justify-center px-[1.5rem] py-[1.25rem] bg-[var(--color-black-plus)] rounded-[1.25rem] gap-[0.75rem] opacity-0 reveal-trigger"
+                data-anim={`fade-scale-blur delay-${Math.min(index * 100 + 200, 400)}`}
+              >
+                <img src={skill.icon} alt={skill.name} class="w-[2rem] h-[2rem] object-contain rounded-[0.5rem]" />
+                <span class="text-[var(--color-white)] text-[1.25rem] font-medium leading-[1.07]">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="w-full h-[1px] bg-[#1F2229] opacity-0 reveal-trigger" data-anim="fade-scale-blur delay-200"></div>
+
+        <!-- Разработка -->
+        <div class="flex flex-col items-start gap-[2.5rem]">
+          <div class="text-mask">
+            <h2 class="text-[var(--color-white)] text-[3rem] font-normal leading-[1.07] opacity-0 reveal-trigger" data-anim="text-mask-inner delay-100">Разработка</h2>
+          </div>
+          <div class="flex flex-wrap items-center gap-[0.25rem]">
+            {devSkills.map((skill, index) => (
+              <div 
+                class="flex items-center justify-center px-[1.5rem] py-[1.25rem] bg-[var(--color-black-plus)] rounded-[1.25rem] gap-[0.75rem] opacity-0 reveal-trigger"
+                data-anim={`fade-scale-blur delay-${Math.min(index * 100 + 200, 400)}`}
+              >
+                <img src={skill.icon} alt={skill.name} class="w-[2rem] h-[2rem] object-contain rounded-[0.5rem]" />
+                <span class="text-[var(--color-white)] text-[1.25rem] font-medium leading-[1.07]">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const animClasses = el.getAttribute('data-anim');
+        if (animClasses) {
+          el.classList.remove('opacity-0');
+          el.className += ' ' + animClasses;
+        }
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal-trigger').forEach(el => observer.observe(el));
+
+  const container = document.getElementById('pong-container');
+  const aiPaddle = document.getElementById('pong-ai');
+  const playerPaddle = document.getElementById('pong-player');
+  const ball = document.getElementById('pong-ball');
+  const winBadge = document.getElementById('win-badge');
+
+  if (container && aiPaddle && playerPaddle && ball) {
+    let isDesktop = window.innerWidth >= 1024;
+    let cw = container.clientWidth;
+    let ch = container.clientHeight;
+    
+    // Динамические размеры платформы
+    let paddleL = isDesktop ? 100 : 50; 
+    let paddleT = isDesktop ? 12 : 10;
+    const ballS = 20;
+
+    let bx = cw / 2 - ballS/2, by = ch / 2 - ballS/2;
+    let vx = 4, vy = 4;
+    let playerPos = (isDesktop ? cw : ch) / 2;
+    let aiPos = (isDesktop ? cw : ch) / 2;
+    
+    let isDragging = false;
+    let aiTargetPos = aiPos;
+    let isPaused = false;
+
+    window.addEventListener('resize', () => {
+      isDesktop = window.innerWidth >= 1024;
+      cw = container.clientWidth;
+      ch = container.clientHeight;
+      paddleL = isDesktop ? 100 : 50; 
+      paddleT = isDesktop ? 12 : 10;
+      applyPaddleStyles();
+      if (!isPaused) resetBall();
+    });
+
+    function applyPaddleStyles() {
+      if (isDesktop) {
+        aiPaddle.style.width = `${paddleL}px`; aiPaddle.style.height = `${paddleT}px`;
+        aiPaddle.style.top = '10px'; aiPaddle.style.left = `${aiPos - paddleL/2}px`;
+        
+        playerPaddle.style.width = `${paddleL}px`; playerPaddle.style.height = `${paddleT}px`;
+        playerPaddle.style.bottom = '10px'; playerPaddle.style.top = 'auto'; 
+        playerPaddle.style.left = `${playerPos - paddleL/2}px`;
+      } else {
+        aiPaddle.style.height = `${paddleL}px`; aiPaddle.style.width = `${paddleT}px`;
+        aiPaddle.style.left = '10px'; aiPaddle.style.top = `${aiPos - paddleL/2}px`;
+        
+        playerPaddle.style.height = `${paddleL}px`; playerPaddle.style.width = `${paddleT}px`;
+        playerPaddle.style.right = '10px'; playerPaddle.style.left = 'auto';
+        playerPaddle.style.top = `${playerPos - paddleL/2}px`;
+      }
+    }
+
+    const updatePlayerPos = (e) => {
+      const rect = container.getBoundingClientRect();
+      const pos = e.touches ? e.touches[0] : e;
+      
+      if (isDesktop) {
+        playerPos = Math.max(paddleL/2, Math.min(pos.clientX - rect.left, cw - paddleL/2));
+      } else {
+        playerPos = Math.max(paddleL/2, Math.min(pos.clientY - rect.top, ch - paddleL/2));
+      }
+    };
+
+    container.addEventListener('mousedown', (e) => { isDragging = true; updatePlayerPos(e); });
+    window.addEventListener('mouseup', () => isDragging = false);
+    window.addEventListener('mousemove', (e) => { if(isDragging) updatePlayerPos(e); });
+
+    container.addEventListener('touchstart', (e) => { isDragging = true; updatePlayerPos(e); }, {passive: true});
+    window.addEventListener('touchend', () => isDragging = false);
+    window.addEventListener('touchmove', (e) => { if(isDragging) updatePlayerPos(e); }, {passive: true});
+
+    // Алгоритм симуляции и расчета траектории
+    function calculateAITarget() {
+      // Шанс 10% на рандомное движение вместо расчета
+      if (Math.random() < 0.10) {
+        return Math.random() * ((isDesktop ? cw : ch) - paddleL) + paddleL / 2;
+      }
+
+      let simX = bx, simY = by;
+      let sVx = vx, sVy = vy;
+      let limit = 0;
+
+      if (isDesktop) {
+        while (simY > 10 + paddleT && limit < 500) {
+          simX += sVx;
+          simY += sVy;
+          if (simX <= 0 || simX >= cw - ballS) sVx *= -1;
+          limit++;
+        }
+        return Math.max(paddleL/2, Math.min(simX + ballS/2, cw - paddleL/2));
+      } else {
+        while (simX > 10 + paddleT && limit < 500) {
+          simX += sVx;
+          simY += sVy;
+          if (simY <= 0 || simY >= ch - ballS) sVy *= -1;
+          limit++;
+        }
+        return Math.max(paddleL/2, Math.min(simY + ballS/2, ch - paddleL/2));
+      }
+    }
+
+    function triggerWinAnimation() {
+      isPaused = true;
+      bx = cw / 2 - ballS / 2;
+      by = ch / 2 - ballS / 2;
+      ball.style.transform = `translate(${bx}px, ${by}px)`;
+      
+      winBadge.classList.remove('opacity-0', 'scale-90');
+      winBadge.classList.add('opacity-100', 'scale-100');
+
+      setTimeout(() => {
+        winBadge.classList.remove('opacity-100', 'scale-100');
+        winBadge.classList.add('opacity-0', 'scale-90');
+        setTimeout(() => {
+          resetBall();
+          isPaused = false;
+        }, 300);
+      }, 3000);
+    }
+
+    function resetBall() {
+      bx = cw / 2 - ballS / 2;
+      by = ch / 2 - ballS / 2;
+      vx = (Math.random() > 0.5 ? 4 : -4);
+      vy = (Math.random() > 0.5 ? 4 : -4);
+      // Бросаем мяч в сторону игрока
+      if (isDesktop) vy = Math.abs(vy); else vx = Math.abs(vx);
+    }
+
+    function gameLoop() {
+      if (!isPaused) {
+        bx += vx;
+        by += vy;
+
+        const paddleOffset = 10 + paddleT;
+
+        if (isDesktop) {
+          if (bx <= 0 || bx >= cw - ballS) vx *= -1;
+
+          // Игрок отбивает
+          if (vy > 0 && by >= ch - paddleOffset - ballS && by <= ch - 10) {
+            if (bx + ballS >= playerPos - paddleL/2 && bx <= playerPos + paddleL/2) {
+              vy *= -1;
+              aiTargetPos = calculateAITarget(); // Запуск расчета
+            }
+          }
+
+          // Бот отбивает
+          if (vy < 0 && by <= paddleOffset && by >= 10) {
+            if (bx + ballS >= aiPos - paddleL/2 && bx <= aiPos + paddleL/2) {
+              vy *= -1;
+            }
+          }
+
+          if (by > ch) resetBall(); // Пропуск игрока
+          if (by < -ballS) triggerWinAnimation(); // Бот пропустил (Победа)
+
+        } else {
+          if (by <= 0 || by >= ch - ballS) vy *= -1;
+
+          // Игрок отбивает
+          if (vx > 0 && bx >= cw - paddleOffset - ballS && bx <= cw - 10) {
+            if (by + ballS >= playerPos - paddleL/2 && by <= playerPos + paddleL/2) {
+              vx *= -1;
+              aiTargetPos = calculateAITarget(); // Запуск расчета
+            }
+          }
+
+          // Бот отбивает
+          if (vx < 0 && bx <= paddleOffset && bx >= 10) {
+            if (by + ballS >= aiPos - paddleL/2 && by <= aiPos + paddleL/2) {
+              vx *= -1;
+            }
+          }
+
+          if (bx > cw) resetBall(); 
+          if (bx < -ballS) triggerWinAnimation();
+        }
+
+        ball.style.transform = `translate(${bx}px, ${by}px)`;
+      }
+
+      // Бот двигается постоянно к таргету
+      aiPos += (aiTargetPos - aiPos) * 0.1;
+      applyPaddleStyles();
+
+      requestAnimationFrame(gameLoop);
+    }
+
+    applyPaddleStyles();
+    requestAnimationFrame(gameLoop);
+  }
+</script>
