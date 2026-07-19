@@ -179,11 +179,13 @@
         </button>
 
         <a
-          href="/resume.pdf"
+          id="resume-link"
+          href="/resume/Resume.docx"
           target="_blank"
           rel="noopener noreferrer"
           class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[rgba(255,255,255,0.16)] border border-solid border-[var(--color-white)] rounded-[2rem] overflow-hidden lottie-trigger cursor-pointer fade-scale-blur delay-400"
         >
+          <!-- Внутренности кнопки остаются без изменений -->
           <div class="absolute inset-0 bg-white/0 group-hover:bg-white/16 transition-colors duration-300"></div>
           <div class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center">
             <lottie-player src="/lottie/icon-resume.json" loop class="w-full h-full" background="transparent" speed="1"></lottie-player>

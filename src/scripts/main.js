@@ -384,6 +384,16 @@ function applyTranslations(lang) {
     if (status && project.status) status.textContent = project.status;
   });
 
+  const resumeLink = document.getElementById("resume-link");
+  if (resumeLink) {
+    const resumeFiles = {
+      ru: "/resume/Resume.docx",
+      sr: "/resume/Resume-sr.docx",
+      en: "/resume/Resume-en.docx"
+    };
+    resumeLink.href = resumeFiles[lang] || resumeFiles.ru;
+  }
+
   updateLanguageButtons(lang);
 }
 
