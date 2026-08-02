@@ -2,7 +2,8 @@
 const projects = [
   {
     title: "Mochiland",
-    description: "B2B-платформа для компании Mochiland, автоматизирующая сделки поставки их товара",
+    description:
+      "B2B-платформа для компании Mochiland, автоматизирующая сделки поставки их товара",
     image: "/image/port_1.webp",
     theme: "light",
     link: "https://mochi-partners.ru",
@@ -21,7 +22,8 @@ const projects = [
   },
   {
     title: "Российское Содружество Колледжей",
-    description: "Полноценная всероссийская платформа, включает множество функций для развития образовательных учреждений",
+    description:
+      "Полноценная всероссийская платформа, включает множество функций для развития образовательных учреждений",
     image: "/image/port_3.webp",
     theme: "light",
     link: "https://rosdk.ru",
@@ -29,18 +31,20 @@ const projects = [
   },
   {
     title: "Oasis",
-    description: "Полный пак для компании по озеленению, включающий фирменный стиль, сайт, AI-бота",
+    description:
+      "Полный пак для компании по озеленению, включающий фирменный стиль, сайт, AI-бота",
     image: "/image/port_4.webp",
     theme: "light",
-    link: "https://www.figma.com/design/ijTXgS45bo4HkBsVnnqRWM/Oasis?node-id=247-2&t=YnCTS9vgX1F6EBJ6-1",
+    link: "https://oasis31.vercel.app/",
     status: {
-      dotColor: "bg-[rgba(255,26,26,0.60)]",
-      text: "Сайт временно заморожен",
+      dotColor: "bg-[rgba(0,222,96,0.60)]",
+      text: "Некоторые функции сайта недоступны",
     },
   },
   {
     title: "EnergyStart",
-    description: "Фирменный стиль и сайт компании, занимающейся разработкой систем повышения эффективности ЖКХ",
+    description:
+      "Фирменный стиль и сайт компании, занимающейся разработкой систем повышения эффективности ЖКХ",
     image: "/image/port_5.webp",
     theme: "light",
     link: "https://energystart.ru",
@@ -49,7 +53,10 @@ const projects = [
 ];
 ---
 
-<section id="portfolio" class="w-full flex flex-col gap-[3.75rem] mt-[7.5rem] scroll-mt-[7.5rem]">
+<section
+  id="portfolio"
+  class="w-full flex flex-col gap-[3.75rem] mt-[7.5rem] scroll-mt-[7.5rem]"
+>
   <div class="grid-layout w-full">
     <div
       class="col-span-1 flex justify-between items-center text-[var(--color-black)] text-[1.25rem] font-medium uppercase w-full opacity-0 reveal-trigger"
@@ -120,15 +127,23 @@ const projects = [
                   </div>
                 </div>
 
-                <p class="text-[#828894] text-[1rem] font-normal leading-[1.07] max-w-[24rem]" data-project-description>
+                <p
+                  class="text-[#828894] text-[1rem] font-normal leading-[1.07] max-w-[24rem]"
+                  data-project-description
+                >
                   {project.description}
                 </p>
               </div>
 
               {project.status && (
                 <div class="flex items-center gap-[0.5rem] mt-auto pt-[0.25rem]">
-                  <div class={`w-[0.5rem] h-[0.5rem] rounded-full ${project.status.dotColor}`} />
-                  <span class="text-[rgba(130,136,147,0.60)] text-[1rem] font-normal leading-[1.07]" data-project-status>
+                  <div
+                    class={`w-[0.5rem] h-[0.5rem] rounded-full ${project.status.dotColor}`}
+                  />
+                  <span
+                    class="text-[rgba(130,136,147,0.60)] text-[1rem] font-normal leading-[1.07]"
+                    data-project-status
+                  >
                     {project.status.text}
                   </span>
                 </div>
@@ -186,7 +201,10 @@ const projects = [
                   </div>
                 </div>
 
-                <p class="text-[#828894] text-[1rem] font-normal leading-[1.07] max-w-[24rem]" data-project-description>
+                <p
+                  class="text-[#828894] text-[1rem] font-normal leading-[1.07] max-w-[24rem]"
+                  data-project-description
+                >
                   {project.description}
                 </p>
               </div>
