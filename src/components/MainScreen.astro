@@ -1,40 +1,89 @@
 ---
+
 ---
 
 <header
   id="header"
   class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1600px] z-50 transition-all duration-300 py-[1.375rem] px-[1.25rem] md:px-[3.75rem]"
 >
-  <div id="header-inner" class="flex items-center justify-between w-full transition-all duration-300">
+  <div
+    id="header-inner"
+    class="flex items-center justify-between w-full transition-all duration-300"
+  >
     <a href="#home" class="flex flex-col gap-[0.25rem] fade-scale-blur">
-      <div class="font-medium text-[1.5rem] leading-[1.07] tracking-tight uppercase">NIKITA.RYBALKO</div>
-      <div class="flex w-full justify-between items-center font-medium text-[1rem] leading-[1.07]">
+      <div
+        class="font-medium text-[1.5rem] leading-[1.07] tracking-tight uppercase"
+      >
+        NIKITA.RYBALKO
+      </div>
+      <div
+        class="flex w-full justify-between items-center font-medium text-[1rem] leading-[1.07]"
+      >
         <span class="text-[var(--color-gray-text)]">/</span>
         <span>WEB-DESIGNER</span>
       </div>
     </a>
 
-    <div class="hidden md:flex items-center gap-[3.125rem] fade-scale-blur delay-100">
+    <div
+      class="hidden md:flex items-center gap-[3.125rem] fade-scale-blur delay-100"
+    >
       <nav class="flex items-center gap-[3.125rem]">
-        <a href="#skills" data-nav-link class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll">
+        <a
+          href="#skills"
+          data-nav-link
+          class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll"
+        >
           <span class="hover-scroll-main" data-i18n="nav.skills">Навыки</span>
-          <span class="hover-scroll-hover text-[var(--color-black)]" data-i18n="nav.skills">Навыки</span>
+          <span
+            class="hover-scroll-hover text-[var(--color-black)]"
+            data-i18n="nav.skills">Навыки</span
+          >
         </a>
-        <a href="#portfolio" data-nav-link class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll">
-          <span class="hover-scroll-main" data-i18n="nav.portfolio">Портфолио</span>
-          <span class="hover-scroll-hover text-[var(--color-black)]" data-i18n="nav.portfolio">Портфолио</span>
+        <a
+          href="#portfolio"
+          data-nav-link
+          class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll"
+        >
+          <span class="hover-scroll-main" data-i18n="nav.portfolio"
+            >Портфолио</span
+          >
+          <span
+            class="hover-scroll-hover text-[var(--color-black)]"
+            data-i18n="nav.portfolio">Портфолио</span
+          >
         </a>
-        <a href="#competencies" data-nav-link class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll">
-          <span class="hover-scroll-main" data-i18n="nav.competencies">Компетенции</span>
-          <span class="hover-scroll-hover text-[var(--color-black)]" data-i18n="nav.competencies">Компетенции</span>
+        <a
+          href="#competencies"
+          data-nav-link
+          class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll"
+        >
+          <span class="hover-scroll-main" data-i18n="nav.competencies"
+            >Компетенции</span
+          >
+          <span
+            class="hover-scroll-hover text-[var(--color-black)]"
+            data-i18n="nav.competencies">Компетенции</span
+          >
         </a>
-        <a href="#contact" data-nav-link class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll">
-          <span class="hover-scroll-main" data-i18n="nav.contacts">Контакты</span>
-          <span class="hover-scroll-hover text-[var(--color-black)]" data-i18n="nav.contacts">Контакты</span>
+        <a
+          href="#contact"
+          data-nav-link
+          class="link-small text-[var(--color-gray-text)] transition-colors hover-scroll"
+        >
+          <span class="hover-scroll-main" data-i18n="nav.contacts"
+            >Контакты</span
+          >
+          <span
+            class="hover-scroll-hover text-[var(--color-black)]"
+            data-i18n="nav.contacts">Контакты</span
+          >
         </a>
       </nav>
 
-      <div class="inline-flex items-center gap-[0.25rem] rounded-[100px] bg-[var(--color-white)] p-[4px]" data-language-switcher>
+      <div
+        class="inline-flex items-center gap-[0.25rem] rounded-[100px] bg-[var(--color-white)] p-[4px]"
+        data-language-switcher
+      >
         <button
           type="button"
           class="rounded-[100px] px-[12px] py-[10px] text-[16px] font-medium leading-[17.12px] transition-colors duration-300"
@@ -66,8 +115,14 @@
       aria-label="Toggle menu"
       aria-expanded="false"
     >
-      <span data-burger-line="top" class="absolute w-full h-[2px] bg-[var(--color-black)] transition-transform duration-300 -translate-y-1.5"></span>
-      <span data-burger-line="bottom" class="absolute w-full h-[2px] bg-[var(--color-black)] transition-transform duration-300 translate-y-1.5"></span>
+      <span
+        data-burger-line="top"
+        class="absolute w-full h-[2px] bg-[var(--color-black)] transition-transform duration-300 -translate-y-1.5"
+      ></span>
+      <span
+        data-burger-line="bottom"
+        class="absolute w-full h-[2px] bg-[var(--color-black)] transition-transform duration-300 translate-y-1.5"
+      ></span>
     </button>
   </div>
 </header>
@@ -77,21 +132,39 @@
   class="fixed inset-0 bg-[var(--color-back)]/80 backdrop-blur-[32px] z-40 opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center justify-center gap-[2rem] px-[1rem]"
 >
   <nav class="flex flex-col items-center gap-[2rem]">
-    <a href="#skills" data-mobile-nav-link class="text-[2rem] font-medium text-[var(--color-black)]">
+    <a
+      href="#skills"
+      data-mobile-nav-link
+      class="text-[2rem] font-medium text-[var(--color-black)]"
+    >
       <span data-i18n="nav.skills">Навыки</span>
     </a>
-    <a href="#portfolio" data-mobile-nav-link class="text-[2rem] font-medium text-[var(--color-black)]">
+    <a
+      href="#portfolio"
+      data-mobile-nav-link
+      class="text-[2rem] font-medium text-[var(--color-black)]"
+    >
       <span data-i18n="nav.portfolio">Портфолио</span>
     </a>
-    <a href="#competencies" data-mobile-nav-link class="text-[2rem] font-medium text-[var(--color-black)]">
+    <a
+      href="#competencies"
+      data-mobile-nav-link
+      class="text-[2rem] font-medium text-[var(--color-black)]"
+    >
       <span data-i18n="nav.competencies">Компетенции</span>
     </a>
-    <a href="#contact" data-mobile-nav-link class="text-[2rem] font-medium text-[var(--color-black)]">
+    <a
+      href="#contact"
+      data-mobile-nav-link
+      class="text-[2rem] font-medium text-[var(--color-black)]"
+    >
       <span data-i18n="nav.contacts">Контакты</span>
     </a>
   </nav>
 
-  <div class="absolute bottom-[1rem] left-[1rem] right-[1rem] rounded-[100px] bg-[var(--color-white)] p-[4px] flex items-center gap-[4px]">
+  <div
+    class="absolute bottom-[1rem] left-[1rem] right-[1rem] rounded-[100px] bg-[var(--color-white)] p-[4px] flex items-center gap-[4px]"
+  >
     <button
       type="button"
       class="flex-1 rounded-[100px] px-[12px] py-[16px] text-[1.35rem] font-medium leading-[1.07] transition-colors duration-300"
@@ -116,18 +189,28 @@
   </div>
 </div>
 
-<main id="home" class="w-full max-w-[1600px] mx-auto h-[100vh] relative pt-[8rem] box-border">
+<main
+  id="home"
+  class="w-full max-w-[1600px] mx-auto h-[100vh] relative pt-[8rem] box-border"
+>
   <div class="grid-layout w-full">
     <div class="col-span-4">
       <h1 class="h1 flex flex-col items-start">
         <span class="text-mask">
-          <span class="text-mask-inner text-[var(--color-black)]" data-i18n="hero.name">Никита Рыбалко</span>
+          <span
+            class="text-mask-inner text-[var(--color-black)]"
+            data-i18n="hero.name">Никита Рыбалко</span
+          >
         </span>
         <span class="text-mask">
           <span class="text-mask-inner delay-100 whitespace-normal">
-            <span class="text-[var(--color-yellow)]" data-i18n="hero.web">Web-</span>
+            <span class="text-[var(--color-yellow)]" data-i18n="hero.web"
+              >Web-</span
+            >
             <wbr />
-            <span class="text-[var(--color-black)]" data-i18n="hero.roleSuffix">дизайнер и разработчик</span>
+            <span class="text-[var(--color-black)]" data-i18n="hero.roleSuffix"
+              >дизайнер и разработчик</span
+            >
           </span>
         </span>
       </h1>
@@ -140,7 +223,8 @@
           data-i18n="hero.description"
           data-i18n-html="true"
         >
-          Проектирую UI/UX интерфейсы и полностью реализую их в коде (Web, Mobile, Desktop). Сервисы должны быть красивыми, приносить пользу и
+          Проектирую UI/UX интерфейсы и полностью реализую их в коде (Web,
+          Mobile, Desktop). Сервисы должны быть красивыми, приносить пользу и
           <span class="text-tiny text-[var(--color-gray-text)]">деньги</span>
         </p>
       </div>
@@ -155,11 +239,24 @@
           class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[var(--color-black)] rounded-[2rem] overflow-hidden lottie-trigger border-none cursor-pointer fade-scale-blur delay-200"
           data-scroll-to="contact"
         >
-          <div class="absolute inset-0 bg-white/0 group-hover:bg-white/16 transition-colors duration-300"></div>
-          <div class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center">
-            <lottie-player src="/lottie/icon-contacts.json" loop class="w-full h-full" background="transparent" speed="1"></lottie-player>
+          <div
+            class="absolute inset-0 bg-white/0 group-hover:bg-white/16 transition-colors duration-300"
+          >
           </div>
-          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-white)] whitespace-nowrap" data-i18n="hero.contactsButton">
+          <div
+            class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center"
+          >
+            <lottie-player
+              src="/lottie/icon-contacts.json"
+              loop
+              class="w-full h-full"
+              background="transparent"
+              speed="1"></lottie-player>
+          </div>
+          <span
+            class="relative z-10 font-medium text-[1.25rem] text-[var(--color-white)] whitespace-nowrap"
+            data-i18n="hero.contactsButton"
+          >
             Контакты
           </span>
         </button>
@@ -169,28 +266,55 @@
           class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[var(--color-white)] rounded-[2rem] overflow-hidden lottie-trigger border-none cursor-pointer fade-scale-blur delay-300"
           data-scroll-to="portfolio"
         >
-          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/[0.02] transition-colors duration-300"></div>
-          <div class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center">
-            <lottie-player src="/lottie/icon-portfolio.json" loop class="w-full h-full" background="transparent" speed="1"></lottie-player>
+          <div
+            class="absolute inset-0 bg-black/0 group-hover:bg-black/[0.02] transition-colors duration-300"
+          >
           </div>
-          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-black)] whitespace-nowrap" data-i18n="hero.portfolioButton">
+          <div
+            class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center"
+          >
+            <lottie-player
+              src="/lottie/icon-portfolio.json"
+              loop
+              class="w-full h-full"
+              background="transparent"
+              speed="1"></lottie-player>
+          </div>
+          <span
+            class="relative z-10 font-medium text-[1.25rem] text-[var(--color-black)] whitespace-nowrap"
+            data-i18n="hero.portfolioButton"
+          >
             Портфолио
           </span>
         </button>
 
         <a
           id="resume-link"
+          download
           href="/resume/Resume.docx"
           target="_blank"
           rel="noopener noreferrer"
           class="flex-1 group relative flex items-center justify-center gap-3 p-[2rem] bg-[rgba(255,255,255,0.16)] border border-solid border-[var(--color-white)] rounded-[2rem] overflow-hidden lottie-trigger cursor-pointer fade-scale-blur delay-400"
         >
           <!-- Внутренности кнопки остаются без изменений -->
-          <div class="absolute inset-0 bg-white/0 group-hover:bg-white/16 transition-colors duration-300"></div>
-          <div class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center">
-            <lottie-player src="/lottie/icon-resume.json" loop class="w-full h-full" background="transparent" speed="1"></lottie-player>
+          <div
+            class="absolute inset-0 bg-white/0 group-hover:bg-white/16 transition-colors duration-300"
+          >
           </div>
-          <span class="relative z-10 font-medium text-[1.25rem] text-[var(--color-black)] whitespace-nowrap" data-i18n="hero.resumeButton">
+          <div
+            class="relative z-10 w-[1.5rem] h-[1.5rem] flex items-center justify-center"
+          >
+            <lottie-player
+              src="/lottie/icon-resume.json"
+              loop
+              class="w-full h-full"
+              background="transparent"
+              speed="1"></lottie-player>
+          </div>
+          <span
+            class="relative z-10 font-medium text-[1.25rem] text-[var(--color-black)] whitespace-nowrap"
+            data-i18n="hero.resumeButton"
+          >
             Скачать резюме
           </span>
         </a>
