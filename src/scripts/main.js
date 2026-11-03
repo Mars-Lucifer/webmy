@@ -30,6 +30,12 @@ const translations = {
       sectionLabel: "портфолио",
       cards: [
         {
+          title: "Lucid мобильное приложение",
+          description:
+            "Мобильное приложение для отслеживания трат и учета своих финансов",
+          status: "В разработке",
+        },
+        {
           title: "Mochiland",
           description:
             "B2B-платформа для компании Mochiland, автоматизирующая сделки поставки их товара",
@@ -50,7 +56,6 @@ const translations = {
           title: "Oasis",
           description:
             "Полный пак для компании по озеленению, включающий фирменный стиль, сайт, AI-бота",
-          status: "Сайт временно заморожен",
         },
         {
           title: "EnergyStart",
@@ -123,6 +128,12 @@ const translations = {
       sectionLabel: "portfolio",
       cards: [
         {
+          title: "Lucid mobilna aplikacija",
+          description:
+            "Mobilna aplikacija za praćenje troškova i upravljanje ličnim finansijama",
+          status: "U izradi",
+        },
+        {
           title: "Mochiland",
           description:
             "B2B platforma za kompaniju Mochiland koja automatizuje prodaju njihove robe",
@@ -143,7 +154,6 @@ const translations = {
           title: "Oasis",
           description:
             "Kompletan paket za kompaniju za ozelenjavanje, uključujući vizuelni identitet, sajt i AI bota",
-          status: "Sajt je privremeno zamrznut",
         },
         {
           title: "EnergyStart",
@@ -162,7 +172,12 @@ const translations = {
         },
         development: {
           title: "Razvoj",
-          tags: ["Web platforme", "Landing stranice", "Mobile App", "Desktop App"],
+          tags: [
+            "Web platforme",
+            "Landing stranice",
+            "Mobile App",
+            "Desktop App",
+          ],
         },
         other: {
           title: "Ostalo",
@@ -216,6 +231,12 @@ const translations = {
       sectionLabel: "portfolio",
       cards: [
         {
+          title: "Lucid mobile app",
+          description:
+            "Mobile application for tracking expenses and managing personal finances",
+          status: "In progress",
+        },
+        {
           title: "Mochiland",
           description:
             "A B2B platform for Mochiland that automates the supply deal flow of their products",
@@ -223,7 +244,8 @@ const translations = {
         },
         {
           title: "Artur Odilov",
-          description: "A portfolio website for a professional photographer from Moscow",
+          description:
+            "A portfolio website for a professional photographer from Moscow",
           status: null,
         },
         {
@@ -236,7 +258,6 @@ const translations = {
           title: "Oasis",
           description:
             "A full package for a landscaping company, including a visual identity, website, and AI bot",
-          status: "Website temporarily frozen",
         },
         {
           title: "EnergyStart",
@@ -289,7 +310,9 @@ const burgerBtn = document.getElementById("burger-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const header = document.getElementById("header");
 const headerInner = document.getElementById("header-inner");
-const navLinks = document.querySelectorAll("[data-nav-link], [data-mobile-nav-link]");
+const navLinks = document.querySelectorAll(
+  "[data-nav-link], [data-mobile-nav-link]",
+);
 const scrollButtons = document.querySelectorAll("[data-scroll-to]");
 
 let activeLanguage = supportedLangs.includes(localStorage.getItem(STORAGE_KEY))
@@ -298,7 +321,9 @@ let activeLanguage = supportedLangs.includes(localStorage.getItem(STORAGE_KEY))
 let isMenuOpen = false;
 
 function getByPath(source, path) {
-  return path.split(".").reduce((value, key) => (value ? value[key] : undefined), source);
+  return path
+    .split(".")
+    .reduce((value, key) => (value ? value[key] : undefined), source);
 }
 
 function closeMenu() {
@@ -309,7 +334,8 @@ function closeMenu() {
   burgerBtn.setAttribute("aria-expanded", "false");
   document.body.classList.remove("overflow-hidden");
 
-  const [topLine, bottomLine] = burgerBtn.querySelectorAll("[data-burger-line]");
+  const [topLine, bottomLine] =
+    burgerBtn.querySelectorAll("[data-burger-line]");
   topLine?.classList.remove("rotate-45");
   topLine?.classList.add("-translate-y-1.5");
   bottomLine?.classList.remove("-rotate-45");
@@ -324,7 +350,8 @@ function openMenu() {
   burgerBtn.setAttribute("aria-expanded", "true");
   document.body.classList.add("overflow-hidden");
 
-  const [topLine, bottomLine] = burgerBtn.querySelectorAll("[data-burger-line]");
+  const [topLine, bottomLine] =
+    burgerBtn.querySelectorAll("[data-burger-line]");
   topLine?.classList.remove("-translate-y-1.5");
   topLine?.classList.add("rotate-45");
   bottomLine?.classList.remove("translate-y-1.5");
@@ -347,7 +374,11 @@ function updateLanguageButtons(lang) {
     if (isActive) {
       button.classList.add("bg-[var(--color-black)]", "text-white");
     } else {
-      button.classList.add("bg-transparent", "text-[var(--color-gray-text)]", "hover:text-[var(--color-black)]");
+      button.classList.add(
+        "bg-transparent",
+        "text-[var(--color-gray-text)]",
+        "hover:text-[var(--color-black)]",
+      );
     }
   });
 }
@@ -387,9 +418,9 @@ function applyTranslations(lang) {
   const resumeLink = document.getElementById("resume-link");
   if (resumeLink) {
     const resumeFiles = {
-      ru: "/resume/Resume.docx",
-      sr: "/resume/Resume-sr.docx",
-      en: "/resume/Resume-en.docx"
+      ru: "/resume/Resume.pdf",
+      sr: "/resume/Resume-sr.pdf",
+      en: "/resume/Resume-en.pdf",
     };
     resumeLink.href = resumeFiles[lang] || resumeFiles.ru;
   }
