@@ -28,6 +28,10 @@ const translations = {
     },
     portfolio: {
       sectionLabel: "портфолио",
+      tabs: {
+        web: "Web-проекты",
+        presentations: "Презентации",
+      },
       cards: [
         {
           title: "Lucid мобильное приложение",
@@ -62,6 +66,28 @@ const translations = {
           description:
             "Фирменный стиль и сайт компании, занимающейся разработкой систем повышения эффективности ЖКХ",
           status: null,
+        },
+      ],
+      presentations: [
+        {
+          title: "Отчет энергокомпании",
+          description:
+            "Отчетная презентация энергокомпании с ключевыми показателями, динамикой развития и планами.",
+        },
+        {
+          title: "Коммерческое предложение B2B",
+          description:
+            "Короткое коммерческое предложение о B2B-платформе для бизнеса.",
+        },
+        {
+          title: "Oishi брендбук",
+          description:
+            "Презентация-брендбук для бренда азиатской кухни и сообщества Oishi.",
+        },
+        {
+          title: "Мочиленд для бизнеса",
+          description:
+            "Презентация поставщика десертов моти для бизнеса с особыми условиями сотрудничества.",
         },
       ],
     },
@@ -126,6 +152,10 @@ const translations = {
     },
     portfolio: {
       sectionLabel: "portfolio",
+      tabs: {
+        web: "Web projekti",
+        presentations: "Prezentacije",
+      },
       cards: [
         {
           title: "Lucid mobilna aplikacija",
@@ -160,6 +190,28 @@ const translations = {
           description:
             "Vizuelni identitet i sajt kompanije koja razvija sisteme za povećanje efikasnosti komunalnih usluga",
           status: null,
+        },
+      ],
+      presentations: [
+        {
+          title: "Izveštaj energetske kompanije",
+          description:
+            "Izveštajna prezentacija energetske kompanije sa ključnim pokazateljima, razvojem i planovima.",
+        },
+        {
+          title: "B2B komercijalna ponuda",
+          description:
+            "Kratka komercijalna ponuda za B2B platformu namenjenu kompanijama.",
+        },
+        {
+          title: "Oishi brend priručnik",
+          description:
+            "Prezentacija brend priručnika za Oishi, brend azijske kuhinje i zajednice.",
+        },
+        {
+          title: "Mochiland za biznis",
+          description:
+            "Prezentacija dobavljača mochi deserata sa posebnim uslovima saradnje za kompanije.",
         },
       ],
     },
@@ -229,6 +281,10 @@ const translations = {
     },
     portfolio: {
       sectionLabel: "portfolio",
+      tabs: {
+        web: "Web projects",
+        presentations: "Presentations",
+      },
       cards: [
         {
           title: "Lucid mobile app",
@@ -264,6 +320,28 @@ const translations = {
           description:
             "Brand identity and a website for a company developing systems that improve utility efficiency",
           status: null,
+        },
+      ],
+      presentations: [
+        {
+          title: "Energy company report",
+          description:
+            "A reporting deck covering the energy company’s key metrics, growth, and plans.",
+        },
+        {
+          title: "B2B commercial proposal",
+          description:
+            "A concise commercial proposal presenting a B2B platform for businesses.",
+        },
+        {
+          title: "Oishi brand book",
+          description:
+            "A brand book presentation for Oishi, an Asian food and community brand.",
+        },
+        {
+          title: "Mochiland for business",
+          description:
+            "A supplier presentation offering mochi desserts and special partnership terms for businesses.",
         },
       ],
     },
@@ -304,7 +382,12 @@ const translations = {
   },
 };
 
-const projectCards = document.querySelectorAll("[data-project-card]");
+const webProjectCards = document.querySelectorAll(
+  '[data-project-card][data-project-kind="web"]',
+);
+const presentationCards = document.querySelectorAll(
+  '[data-project-card][data-project-kind="presentation"]',
+);
 const languageButtons = document.querySelectorAll("[data-lang-option]");
 const burgerBtn = document.getElementById("burger-btn");
 const mobileMenu = document.getElementById("mobile-menu");
@@ -402,7 +485,7 @@ function applyTranslations(lang) {
     }
   });
 
-  projectCards.forEach((card, index) => {
+  webProjectCards.forEach((card, index) => {
     const project = dictionary.portfolio.cards[index];
     if (!project) return;
 
@@ -413,6 +496,17 @@ function applyTranslations(lang) {
     if (title) title.textContent = project.title;
     if (description) description.textContent = project.description;
     if (status && project.status) status.textContent = project.status;
+  });
+
+  presentationCards.forEach((card, index) => {
+    const presentation = dictionary.portfolio.presentations[index];
+    if (!presentation) return;
+
+    const title = card.querySelector("[data-project-title]");
+    const description = card.querySelector("[data-project-description]");
+
+    if (title) title.textContent = presentation.title;
+    if (description) description.textContent = presentation.description;
   });
 
   const resumeLink = document.getElementById("resume-link");
