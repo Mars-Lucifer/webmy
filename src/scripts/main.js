@@ -70,6 +70,11 @@ const translations = {
       ],
       presentations: [
         {
+          title: "Oishi брендбук",
+          description:
+            "Презентация-брендбук для бренда азиатской кухни и сообщества Oishi.",
+        },
+        {
           title: "Отчет энергокомпании",
           description:
             "Отчетная презентация энергокомпании с ключевыми показателями, динамикой развития и планами.",
@@ -78,11 +83,6 @@ const translations = {
           title: "Коммерческое предложение B2B",
           description:
             "Короткое коммерческое предложение о B2B-платформе для бизнеса.",
-        },
-        {
-          title: "Oishi брендбук",
-          description:
-            "Презентация-брендбук для бренда азиатской кухни и сообщества Oishi.",
         },
         {
           title: "Мочиленд для бизнеса",
@@ -194,6 +194,11 @@ const translations = {
       ],
       presentations: [
         {
+          title: "Oishi brend priručnik",
+          description:
+            "Prezentacija brend priručnika za Oishi, brend azijske kuhinje i zajednice.",
+        },
+        {
           title: "Izveštaj energetske kompanije",
           description:
             "Izveštajna prezentacija energetske kompanije sa ključnim pokazateljima, razvojem i planovima.",
@@ -202,11 +207,6 @@ const translations = {
           title: "B2B komercijalna ponuda",
           description:
             "Kratka komercijalna ponuda za B2B platformu namenjenu kompanijama.",
-        },
-        {
-          title: "Oishi brend priručnik",
-          description:
-            "Prezentacija brend priručnika za Oishi, brend azijske kuhinje i zajednice.",
         },
         {
           title: "Mochiland za biznis",
@@ -324,6 +324,11 @@ const translations = {
       ],
       presentations: [
         {
+          title: "Oishi brand book",
+          description:
+            "A brand book presentation for Oishi, an Asian food and community brand.",
+        },
+        {
           title: "Energy company report",
           description:
             "A reporting deck covering the energy company’s key metrics, growth, and plans.",
@@ -332,11 +337,6 @@ const translations = {
           title: "B2B commercial proposal",
           description:
             "A concise commercial proposal presenting a B2B platform for businesses.",
-        },
-        {
-          title: "Oishi brand book",
-          description:
-            "A brand book presentation for Oishi, an Asian food and community brand.",
         },
         {
           title: "Mochiland for business",
